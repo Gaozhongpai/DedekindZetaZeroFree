@@ -16,7 +16,7 @@ variable {S : DedekindZetaZeroFree.SArithmeticData F}
 variable {η : DedekindZetaZeroFree.RayClassCharacter F S.modulus}
 variable (D : FixedData S η)
 
-theorem savings_gt : (1 / 32 : ℝ) < 37719867 / 1000000000 ∧ (1 / 32 : ℝ) < 384999 / 10000000 := by
+theorem savings_gt : (1 / 32 : ℝ) < 37749867 / 1000000000 ∧ (1 / 32 : ℝ) < 384999 / 10000000 := by
   norm_num
 
 theorem principal_comparison :
@@ -25,10 +25,10 @@ theorem principal_comparison :
       Jpr D Z = Spectral.c₀ D * Spectral.f D Z + PrincipalWShift.Rw D Z +
         PrincipalZShift.Rz D Z) ∧
     (∃ C : ℝ, 0 < C ∧ ∀ Z : ℝ, 2 ≤ Z →
-      ‖PrincipalWShift.Rw D Z‖ ≤ C * Z ^ (Scales.mainExponent - 37719867 / 1000000000)) ∧
+      ‖PrincipalWShift.Rw D Z‖ ≤ C * Z ^ (Scales.mainExponent - 37749867 / 1000000000)) ∧
     (∃ C : ℝ, 0 < C ∧ ∀ Z : ℝ, 2 ≤ Z →
       ‖PrincipalZShift.Rz D Z‖ ≤ C * Z ^ (Scales.mainExponent - 384999 / 10000000)) ∧
-    (1 / 32 : ℝ) < 37719867 / 1000000000 ∧ (1 / 32 : ℝ) < 384999 / 10000000 := by
+    (1 / 32 : ℝ) < 37749867 / 1000000000 ∧ (1 / 32 : ℝ) < 384999 / 10000000 := by
   refine ⟨ResidueNonzero.c₀_ne_zero D, fun Z hZ => ?_, PrincipalWShift.Rw_bound D,
     PrincipalZShift.Rz_bound D, savings_gt.1, savings_gt.2⟩
   rw [PrincipalWShift.Jpr_eq D Z hZ, PrincipalZShift.Jwres_eq D Z hZ]

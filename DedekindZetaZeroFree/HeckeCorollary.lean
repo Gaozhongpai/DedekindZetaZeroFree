@@ -16,7 +16,7 @@ theorem heckeL_ne_zero
       (¬ χ.IsPrincipal → Differentiable ℂ f) ∧
       (∀ s, 1 < s.re → HasSum (fun I : Ideal (𝓞 K) =>
         χ I * (Ideal.absNorm I : ℂ) ^ (-s)) (f s)) ∧
-      ∀ s, 4843 / 5000 < s.re → (s ≠ 1 ∨ ¬ χ.IsPrincipal) → f s ≠ 0 := by
+      ∀ s, 31 / 32 < s.re → (s ≠ 1 ∨ ¬ χ.IsPrincipal) → f s ≠ 0 := by
   by_cases hχ : χ.IsPrincipal
   · obtain ⟨f, hf, hsum, hnz⟩ := HeckeCorollary.principalRayCharacter_ne_zero K m hm χ hχ
     refine ⟨f, hf, fun h => (h hχ).elim, hsum, ?_⟩

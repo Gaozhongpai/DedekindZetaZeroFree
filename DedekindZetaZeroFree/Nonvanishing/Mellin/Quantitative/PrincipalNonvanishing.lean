@@ -14,7 +14,7 @@ theorem comparisonPrincipalIncompleteL_ne_zero
     (F : Type) [Field F] [NumberField F] (S : SArithmeticData F)
     (η : RayClassCharacter F S.modulus) (hη : η.IsPrincipal)
     (P : PrincipalRayHeckeData F S.modulus η) :
-    ∀ s : ℂ, 4843 / 5000 < s.re → s ≠ 1 →
+    ∀ s : ℂ, 31 / 32 < s.re → s ≠ 1 →
       comparisonPrincipalIncompleteL F S η hη P s ≠ 0 := by
   obtain ⟨R, hR, ⟨M⟩⟩ := DedekindZetaZeroFree.MomentSources.source_exists S η hη P
   intro s hs hs1

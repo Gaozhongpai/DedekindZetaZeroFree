@@ -1,46 +1,43 @@
-# A proposed parameter refinement to 4843/5000
+# A source refinement to 1209/1250
 
-This branch proposes the uniform boundary 4843/5000 = 0.9686 for Dedekind
-zeta functions and finite-order Hecke L-functions over every number field,
-at every height, with the same pole exclusions as the original theorem.
-The improvement over 31/32 is 3/20000 = 0.00015. Native compilation is pending;
-this document does not claim an independently verified record.
+The new source targets nonvanishing for every number field and finite-order
+Hecke character in Re(s)>1209/1250, with the original pole exclusions. Whole
+compilation and independent verification are pending; no verified record is
+claimed. Original Axiom Math research and formalization, and all dependency
+licenses, are retained and credited separately from this refinement.
 
-The refinement uses Axiom Math's proof at
-09afbb4ce6570c1615d58509dc197fc9f0956b7d. The original work and formalization
-are credited to Dean Cureton, Jesse Thorner, AxiomProver and the dependencies
-acknowledged in the original README. This is a parameter refinement, with no
-new arithmetic estimate claimed.
+## The analytic improvement
 
-## Scale change
+The independently registered original31/32 proof is retained byte-for-byte at
+09afbb4ce6570c1615d58509dc197fc9f0956b7d. Uniform logarithmic control turns
+that common zero-free strip and the existing polynomial conductor estimates
+into L(.97+it) << Q^epsilon(2+|t|). The primitive functional equation gives
+conductor exponent.47 at.03. Interpolation then gives17/40 at.12, uniformly
+in the primitive character and every height.
 
-Keep x = 67/100, smoothing exponent 33/100, all contours, detector parameters,
-and frequency cutoffs. Replace y = 151/400 by 943/2500. The support exponent
-becomes 1309/1250 > 1 and the reflected exponent becomes 1793/5000.
+The actual Euler masks are paid before combining the numerator with q^(-2/5).
+The resulting row cost is1/40, replacing1/25. Both allowed and omitted
+frequency incidences use this input. The original detector, zero-density
+estimates and contour geometry are retained. Polynomial height exponents are
+fixed before epsilon and the row; rho is chosen afterward under the original
+height conditions.
 
-For fixed positive Z, the new Mellin kernel differs from the old kernel by
-Z^(-(3/10000)(w-1)). This factor is entire and nonzero. Its absolute value
-is constant along each vertical w-line, so it preserves the contour
-analyticity and vertical decay. On the low line Re(w)=3/25 the exponent
-cost is 33/125000; at the principal residue w=1 the factor is one.
-The spectral shift therefore stays 61/100.
+## Recovery of the boundary
 
-The general support-moment estimate is applied at the new support exponent.
-Together with the additive coefficient energy bound, it gives the reflected
-power 1793/5000. Both allowed and omitted frequency decompositions are retained.
-With the original positive epsilon choices, the largest comparison error
-power is 44821/125000 = 0.358568, below the common comparison power
-35859/100000 = 0.35859, which is below 1793/5000 = 0.3586.
+The y scale is234/625. Reflected growth is893/2500 and the complete comparison
+fits below35719/100000. Adding the unchanged61/100 spectral shift gives
+1209/1250. Every new scale-dependent declaration lives in the separate
+Refinement9672 namespace. The old proof has no import of this extension, so
+its zero-free input is independent of the new conclusion.
 
-Thus the same growth and Mellin continuation argument targets
-61/100 + 1793/5000 = 4843/5000. The arbitrary-field descent and the Hecke
-factorization use the same boundary. The old Challenge statements remain
-31/32 and are obtained by weakening the stronger native theorems.
+The exact new problem and proof targets are Gao9672Challenge.lean and
+Gao9672Solution.lean, with comparator-9672.json and formalization-9672.yaml.
+The Challenge contains intentional problem placeholders; the Solution and
+all new proof modules contain no proof admissions. Isolated checks and source
+review support this implementation; successful full replay is still required.
 
-## Validation
-
-Exact rational cost checks and independent source/diff review passed before
-this branch was prepared. The unchanged native workflow will build all local
-modules, Challenge and Solution. Solution also prints the axiom closures of
-the two strengthened native endpoint theorems. Previously built dependent
-modules must be rebuilt after the scale definitions change.
+Refinement and integration: Zhongpai Gao, with AI assistance. Original research:
+Dean Cureton and Jesse Thorner; original proofs and formalization: AxiomProver
+at Axiom Math. The source extension was developed from the earlier8291932
+parameter-refinement template, while its actual imported Lean baseline is the
+original independently registered09afbb4 source. Apache-2.0.

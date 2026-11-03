@@ -22,7 +22,7 @@ theorem c₀_ne_zero : Spectral.c₀ D ≠ 0 :=
 
 theorem Iscale_sub_main_le :
     ∃ C : ℝ, 0 < C ∧ ∀ Z : ℝ, 2 ≤ Z →
-      ‖D.Iscale Z - Spectral.c₀ D * Spectral.f D Z‖ ≤ C * Z ^ (35859 / 100000 : ℝ) := by
+      ‖D.Iscale Z - Spectral.c₀ D * Spectral.f D Z‖ ≤ C * Z ^ (717 / 2000 : ℝ) := by
   obtain ⟨-, hJ, ⟨Cw, hCw, hw⟩, ⟨Cz, hCz, hz⟩, -, -⟩ := Principal.principal_comparison D
   obtain ⟨Cr, hCr, hr⟩ := Rows.nonprincipalSum_bound D
   obtain ⟨Co, hCo, ho⟩ := OmittedProbeBound.omittedSum_bound D
@@ -49,11 +49,11 @@ theorem Iscale_sub_main_le :
     rw [PoissonIdentity.Iscale_eq_principal_add_nonprincipal D Z hZ0,
       (PoissonIdentity.nonprincipal_eq_sum_dyads D Z hZ0).2, hprin, h2]
     try rfl
-  have hexp1 : ∀ Z : ℝ, 2 ≤ Z → Z ^ (Scales.mainExponent - 37719867 / 1000000000) ≤ Z ^ (35859 / 100000 : ℝ) := by
+  have hexp1 : ∀ Z : ℝ, 2 ≤ Z → Z ^ (Scales.mainExponent - 37749867 / 1000000000) ≤ Z ^ (717 / 2000 : ℝ) := by
     intro Z hZ
     apply Real.rpow_le_rpow_of_exponent_le (by linarith)
     norm_num [Scales.mainExponent]
-  have hexp2 : ∀ Z : ℝ, 2 ≤ Z → Z ^ (Scales.mainExponent - 384999 / 10000000) ≤ Z ^ (35859 / 100000 : ℝ) := by
+  have hexp2 : ∀ Z : ℝ, 2 ≤ Z → Z ^ (Scales.mainExponent - 384999 / 10000000) ≤ Z ^ (717 / 2000 : ℝ) := by
     intro Z hZ
     apply Real.rpow_le_rpow_of_exponent_le (by linarith)
     norm_num [Scales.mainExponent]
@@ -63,7 +63,7 @@ theorem Iscale_sub_main_le :
         PoissonFrequencyDecomposition.omittedSum D Z := by
     rw [hid Z hZ, hJ Z hZ]; ring
   rw [h1]
-  have hp : 0 ≤ Z ^ (35859 / 100000 : ℝ) := Real.rpow_nonneg (by linarith) _
+  have hp : 0 ≤ Z ^ (717 / 2000 : ℝ) := Real.rpow_nonneg (by linarith) _
   have a1 := (hw Z hZ).trans (mul_le_mul_of_nonneg_left (hexp1 Z hZ) hCw.le)
   have a2 := (hz Z hZ).trans (mul_le_mul_of_nonneg_left (hexp2 Z hZ) hCz.le)
   have a3 := hr Z hZ

@@ -114,18 +114,18 @@ theorem rpow_mul_f (Z : ℝ) (hZ : 0 < Z) :
 
 theorem numerator_differentiableOn :
     DifferentiableOn ℂ (fun s : ℂ => Complex.exp ((s - 5 / 6) ^ 2) * H D s)
-      {s : ℂ | 4843 / 5000 < s.re} := by
+      {s : ℂ | 31 / 32 < s.re} := by
   have hH : DifferentiableOn ℂ (fun s : ℂ => D.recipe.H s) {s : ℂ | (2 / 3 : ℝ) < s.re} :=
     PrincipalMellin.actual_principal_H_differentiable D.recipe
-  have hsub : {s : ℂ | 4843 / 5000 < s.re} ⊆ {s : ℂ | (2 / 3 : ℝ) < s.re} := fun s hs => by
+  have hsub : {s : ℂ | 31 / 32 < s.re} ⊆ {s : ℂ | (2 / 3 : ℝ) < s.re} := fun s hs => by
     simp only [Set.mem_setOf_eq] at hs ⊢
     linarith
   have hexp : DifferentiableOn ℂ (fun s : ℂ => Complex.exp ((s - 5 / 6) ^ 2))
-      {s : ℂ | 4843 / 5000 < s.re} :=
+      {s : ℂ | 31 / 32 < s.re} :=
     (by fun_prop : Differentiable ℂ (fun s : ℂ => Complex.exp ((s - 5 / 6) ^ 2))).differentiableOn
   exact hexp.mul (hH.mono hsub)
 
-theorem numerator_ne_zero (s : ℂ) (hs : 4843 / 5000 < s.re) :
+theorem numerator_ne_zero (s : ℂ) (hs : 31 / 32 < s.re) :
     Complex.exp ((s - 5 / 6) ^ 2) * H D s ≠ 0 := by
   have h : D.recipe.H s ≠ 0 :=
     PrincipalMellin.actual_principal_H_ne_zero D.recipe s (by linarith)

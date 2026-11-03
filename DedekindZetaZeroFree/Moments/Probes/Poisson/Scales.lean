@@ -10,13 +10,13 @@ noncomputable section
 
 def xExponent : ℝ := 67 / 100
 
-def yExponent : ℝ := 943 / 2500
+def yExponent : ℝ := 151 / 400
 
 def smoothingExponent : ℝ := 33 / 100
 
-def supportExponent : ℝ := 1309 / 1250
+def supportExponent : ℝ := 419 / 400
 
-def reflectedExponent : ℝ := 1793 / 5000
+def reflectedExponent : ℝ := 287 / 800
 
 def smallCutoffExponent : ℝ := 1 / 5
 

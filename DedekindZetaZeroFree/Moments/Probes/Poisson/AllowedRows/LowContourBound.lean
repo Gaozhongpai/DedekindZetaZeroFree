@@ -24,7 +24,7 @@ def JCont (C : Set D.Row) (x y v Z : ℝ) : ℂ :=
       comparisonVerticalIntegral v (fun z => kernelWith D (rowCont D) u ξ w z Z)))
 
 theorem E_relative :
-    Scales.kernelExponent Scales.rightLine Scales.wLine Scales.zLine - Scales.mainExponent = -31867 / 125000 + Scales.contourOffset := by
+    Scales.kernelExponent Scales.rightLine Scales.wLine Scales.zLine - Scales.mainExponent = -2552 / 10000 + Scales.contourOffset := by
   unfold Scales.kernelExponent Scales.rightLine Scales.contourOffset Scales.xExponent Scales.smoothingExponent Scales.yExponent Scales.mainExponent Scales.wLine Scales.zLine
   norm_num
 

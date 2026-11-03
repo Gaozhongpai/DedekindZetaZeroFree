@@ -1,0 +1,13 @@
+{
+  "challenge_module": "Gao9672Challenge",
+  "solution_module": "Gao9672Solution",
+  "theorem_names": [
+    "Gao9672.number_field_bound",
+    "Gao9672.hecke_bound"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ]
+}

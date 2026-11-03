@@ -14,7 +14,7 @@ theorem mu12_continuation_ne_zero (F : Type) [Field F] [NumberField F]
     (htc : NumberField.IsTotallyComplex F) (hmu : ∃ ζ : F, IsPrimitiveRoot ζ 12) :
     ∃ f : ℂ → ℂ, DifferentiableOn ℂ f ({1}ᶜ : Set ℂ) ∧
       (∀ s : ℂ, 1 < s.re → f s = NumberField.dedekindZeta F s) ∧
-      ∀ s : ℂ, 4843 / 5000 < s.re → s ≠ 1 → f s ≠ 0 := by
+      ∀ s : ℂ, 31 / 32 < s.re → s ≠ 1 → f s ≠ 0 := by
   obtain ⟨f, hf, hmatch⟩ := DedekindZetaZeroFree.dedekindZeta_continuation F
   refine ⟨f, hf, hmatch, ?_⟩
   obtain ⟨ζ, hζ⟩ := hmu
