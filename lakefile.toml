@@ -1,5 +1,5 @@
 name = "dedekind_zeta"
-defaultTargets = ["DedekindZetaZeroFree", "DedekindZetaChallenge", "DedekindZetaSolution", "Refinement9672", "Gao9672Challenge", "Gao9672Solution"]
+defaultTargets = ["DedekindZetaZeroFree", "DedekindZetaChallenge", "DedekindZetaSolution", "Refinement9668", "Gao9668Challenge", "Gao9668Solution"]
 
 [leanOptions]
 autoImplicit = false
@@ -32,11 +32,11 @@ name = "DedekindZetaSolution"
 srcDir = "Solution"
 
 [[lean_lib]]
-name = "Refinement9672"
-globs = ["Refinement9672", "Refinement9672.+"]
+name = "Refinement9668"
+globs = ["Refinement9668", "Refinement9668.+"]
 
 [[lean_lib]]
-name = "Gao9672Challenge"
+name = "Gao9668Challenge"
 
 [[lean_lib]]
-name = "Gao9672Solution"
+name = "Gao9668Solution"

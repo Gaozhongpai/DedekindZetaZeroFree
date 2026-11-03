@@ -1,7 +1,7 @@
-# A source refinement to 1209/1250
+# A source refinement to 2417/2500
 
 The new source targets nonvanishing for every number field and finite-order
-Hecke character in Re(s)>1209/1250, with the original pole exclusions. Whole
+Hecke character in Re(s)>2417/2500, with the original pole exclusions. Whole
 compilation and independent verification are pending; no verified record is
 claimed. Original Axiom Math research and formalization, and all dependency
 licenses, are retained and credited separately from this refinement.
@@ -24,14 +24,14 @@ height conditions.
 
 ## Recovery of the boundary
 
-The y scale is234/625. Reflected growth is893/2500 and the complete comparison
-fits below35719/100000. Adding the unchanged61/100 spectral shift gives
-1209/1250. Every new scale-dependent declaration lives in the separate
-Refinement9672 namespace. The old proof has no import of this extension, so
+The y scale is467/1250. Reflected growth is223/625 and the complete comparison
+fits below35679/100000. Adding the unchanged61/100 spectral shift gives
+2417/2500. Every new scale-dependent declaration lives in the separate
+Refinement9668 namespace. The old proof has no import of this extension, so
 its zero-free input is independent of the new conclusion.
 
-The exact new problem and proof targets are Gao9672Challenge.lean and
-Gao9672Solution.lean, with comparator-9672.json and formalization-9672.yaml.
+The exact new problem and proof targets are Gao9668Challenge.lean and
+Gao9668Solution.lean, with comparator-9668.json and formalization-9668.yaml.
 The Challenge contains intentional problem placeholders; the Solution and
 all new proof modules contain no proof admissions. Isolated checks and source
 review support this implementation; successful full replay is still required.
@@ -41,3 +41,5 @@ Dean Cureton and Jesse Thorner; original proofs and formalization: AxiomProver
 at Axiom Math. The source extension was developed from the earlier8291932
 parameter-refinement template, while its actual imported Lean baseline is the
 original independently registered09afbb4 source. Apache-2.0.
+
+The 0.9668 candidate retains the analytic input of source1823f8b and spends its remaining scale slack. The module namespace, challenge, solution and comparison configuration use the9668 identifier; both target statements use2417/2500. This is a source candidate awaiting full elaboration and independent checking. It adds no endpoint-fed iteration or new subconvexity estimate.

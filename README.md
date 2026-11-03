@@ -1,4 +1,4 @@
-> This branch adds an unverified1209/1250 refinement. The registered31/32 Lean baseline is retained byte-for-byte; see [REFINEMENT.md](REFINEMENT.md) and formalization-9672.yaml for the new source and verification scope.
+> This branch adds an unverified2417/2500 refinement. The registered31/32 Lean baseline is retained byte-for-byte; see [REFINEMENT.md](REFINEMENT.md) and formalization-9668.yaml for the new source and verification scope.
 
 [![](logo.svg)](https://axiommath.ai/)
 
