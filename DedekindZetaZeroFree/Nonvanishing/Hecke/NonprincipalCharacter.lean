@@ -19,7 +19,7 @@ theorem nonprincipalRayCharacter_ne_zero
     ∃ f : ℂ → ℂ, Differentiable ℂ f ∧
       (∀ s, 1 < s.re → HasSum (fun I : Ideal (𝓞 K) =>
         χ I * (Ideal.absNorm I : ℂ) ^ (-s)) (f s)) ∧
-      (∀ s, 31 / 32 < s.re → f s ≠ 0) := by
+      (∀ s, 4843 / 5000 < s.re → f s ≠ 0) := by
   obtain ⟨R, ρ, hρ, hρprime⟩ := exists_rayCharacter_galoisRealization K m hm χ
   have hρne : ρ ≠ 1 := fun h => hχ (hρ.mp h)
   obtain ⟨m₀, χ₀, f₀, hm₀, _hχ₀, hprime, hf₀, hsum₀, hnz₀⟩ :=

@@ -18,7 +18,7 @@ variable (D : FixedData S η)
 theorem X_eq (Z : ℝ) : Scales.xScale Z = Z ^ (67 / 100 : ℝ) := by
   unfold Scales.xScale Scales.xExponent; norm_num
 
-theorem Y_eq (Z : ℝ) : Scales.yScale Z = Z ^ (151 / 400 : ℝ) := by
+theorem Y_eq (Z : ℝ) : Scales.yScale Z = Z ^ (943 / 2500 : ℝ) := by
   unfold Scales.yScale Scales.yExponent; norm_num
 
 def initialRowIntegrand (u : D.Row) (Z : ℝ) (t : ℝ × ℝ × ℝ) : ℂ :=

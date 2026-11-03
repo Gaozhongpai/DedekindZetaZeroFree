@@ -67,7 +67,7 @@ theorem lowNorm_bound :
 theorem lowNorm_rows_small_k0 (ε : ℝ) (hε : 0 < ε) :
     ∃ C : ℝ, 0 < C ∧ ∀ Z : ℝ, 2 ≤ Z →
       ‖J D (dyadRows D ((2 : ℝ) ^ (0 : ℕ)) \ principalRows D) 4 4 2 Z‖ ≤
-        C * Z ^ (Scales.mainExponent - 471999 / 10000000 + ε) := by
+        C * Z ^ (Scales.mainExponent - 469359 / 10000000 + ε) := by
   obtain ⟨C, hC, h⟩ := lowNorm_bound D
   refine ⟨C, hC, fun Z hZ => ?_⟩
   rw [pow_zero]

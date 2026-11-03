@@ -18,7 +18,7 @@ theorem principalRayCharacter_ne_zero
     ∃ f : ℂ → ℂ, DifferentiableOn ℂ f ({1}ᶜ : Set ℂ) ∧
       (∀ s : ℂ, 1 < s.re → HasSum (fun I : Ideal (𝓞 K) =>
         χ I * (Ideal.absNorm I : ℂ) ^ (-s)) (f s)) ∧
-      ∀ s : ℂ, 31 / 32 < s.re → s ≠ 1 → f s ≠ 0 := by
+      ∀ s : ℂ, 4843 / 5000 < s.re → s ≠ 1 → f s ≠ 0 := by
   let S := (narrowIdealModulus K m hm).finitePart.support
   let χ₀ := trivialRayCharacter K
   obtain ⟨Z, hZdiff, hZseries, hZzero⟩ := dedekindZeta_ne_zero K

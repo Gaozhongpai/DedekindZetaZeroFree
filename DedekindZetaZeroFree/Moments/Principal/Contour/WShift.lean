@@ -36,7 +36,7 @@ def Rw (Z : ℝ) : ℂ :=
 
 theorem E_remainder :
     Scales.kernelExponent Scales.rightLine (9 / 10) (1 / 6 + Scales.contourOffset) =
-      Scales.mainExponent - 37749867 / 1000000000 := by
+      Scales.mainExponent - 37719867 / 1000000000 := by
   unfold Scales.kernelExponent Scales.rightLine Scales.contourOffset Scales.xExponent Scales.smoothingExponent Scales.yExponent Scales.mainExponent
   norm_num
 
@@ -306,7 +306,7 @@ theorem Jpr_eq (Z : ℝ) (hZ : 2 ≤ Z) : Jpr D Z = Jwres D Z + Rw D Z := by
 
 theorem Rw_bound :
     ∃ C : ℝ, 0 < C ∧ ∀ Z : ℝ, 2 ≤ Z →
-      ‖Rw D Z‖ ≤ C * Z ^ (Scales.mainExponent - 37749867 / 1000000000) := by
+      ‖Rw D Z‖ ≤ C * Z ^ (Scales.mainExponent - 37719867 / 1000000000) := by
   classical
   have hu : (ActualRowCount.principalRow D).u = 1 := ActualRowCount.principalRow_u D
   have hδ : (0 : ℝ) < Scales.contourOffset := by unfold Scales.contourOffset; norm_num
@@ -324,7 +324,7 @@ theorem Rw_bound :
   set K : ℝ := ‖((2 * (Real.pi : ℂ))⁻¹)‖ ^ 3 * ∫ p, g p with hK
   have hK0 : 0 ≤ K := mul_nonneg (pow_nonneg (norm_nonneg _) _) hI
   refine ⟨K + 1, by linarith, fun Z hZ => ?_⟩
-  have hZ0 : 0 ≤ Z ^ (Scales.mainExponent - 37749867 / 1000000000) :=
+  have hZ0 : 0 ≤ Z ^ (Scales.mainExponent - 37719867 / 1000000000) :=
     Real.rpow_nonneg (by linarith) _
   have hE := E_remainder
   have hRw : Rw D Z = ((2 * (Real.pi : ℂ))⁻¹) ^ 3 * ∫ a : ℝ, ∫ b : ℝ, ∫ d : ℝ,
@@ -352,11 +352,11 @@ theorem Rw_bound :
         (((9 / 10 : ℝ) : ℂ) + (b : ℂ) * Complex.I)
         (((1 / 6 + Scales.contourOffset : ℝ) : ℂ) + (d : ℂ) * Complex.I) Z‖
       ≤ ‖((2 * (Real.pi : ℂ))⁻¹)‖ ^ 3 *
-          ∫ p, Z ^ (Scales.mainExponent - 37749867 / 1000000000) * g p :=
+          ∫ p, Z ^ (Scales.mainExponent - 37719867 / 1000000000) * g p :=
         mul_le_mul_of_nonneg_left hbd (pow_nonneg (norm_nonneg _) _)
-    _ = K * Z ^ (Scales.mainExponent - 37749867 / 1000000000) := by
+    _ = K * Z ^ (Scales.mainExponent - 37719867 / 1000000000) := by
         rw [MeasureTheory.integral_const_mul, hK]; ring
-    _ ≤ (K + 1) * Z ^ (Scales.mainExponent - 37749867 / 1000000000) :=
+    _ ≤ (K + 1) * Z ^ (Scales.mainExponent - 37719867 / 1000000000) :=
         mul_le_mul_of_nonneg_right (by linarith) hZ0
 
 end

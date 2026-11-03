@@ -25,7 +25,7 @@ theorem galoisCharacter_ne_zero
       Differentiable ℂ f ∧
       (∀ s, 1 < s.re → HasSum (fun I : Ideal (𝓞 K) =>
         χ I * (Ideal.absNorm I : ℂ) ^ (-s)) (f s)) ∧
-      (∀ s, 31 / 32 < s.re → f s ≠ 0) := by
+      (∀ s, 4843 / 5000 < s.re → f s ≠ 0) := by
   obtain ⟨m, χ, hm, hm1, hχ1, hnonprincipal, hprime⟩ := conductorRayRealization K L
   let D := ComplexDual (L ≃ₐ[K] L)
   let E := {σ : D // σ ≠ 1}
